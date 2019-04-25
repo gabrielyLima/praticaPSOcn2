@@ -46,8 +46,6 @@ class Particle:
     # update new particle velocity - clerc
     def update_velocity_clerc(self, pos_best_g):
         c_fac = 0.7298
-        c1 = 2.05
-        c2 = 2.05
 
         for i in range(0, num_dimensions):
             r1 = random.random()

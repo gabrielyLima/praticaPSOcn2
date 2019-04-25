@@ -54,8 +54,8 @@ class Particle:
             r2 = random.random()
 
             vel = c_fac * (
-                    self.velocity[i] + c1 * r1 *(self.pos_best[i] - self.position[i]) + (
-                        c2 * r2 * (pos_best_g[i] - self.position[i])))
+                    (self.velocity[i] + r1) * (self.pos_best[i] - self.position[i]) + (
+                    r2 * (pos_best_g[i] - self.position[i])))
             self.velocity[i] = vel
 
     # update new particle velocity - Linear Decreasing Inertia Weight
